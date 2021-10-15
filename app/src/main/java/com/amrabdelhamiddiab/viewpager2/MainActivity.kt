@@ -5,11 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
-import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 import com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
-import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
 import java.lang.Math.abs
 
 class MainActivity : AppCompatActivity() {
@@ -20,21 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val imageList = listOf(
-            R.drawable.photo1,
-            R.drawable.photo2,
-            R.drawable.photo3,
-            R.drawable.photo1,
-            R.drawable.photo2,
-            R.drawable.photo3,
-            R.drawable.photo1,
-            R.drawable.photo2,
-            R.drawable.photo3,
-            R.drawable.photo1,
-            R.drawable.photo2,
-            R.drawable.photo3
-        )
-        val adapter = ViewPagerAdapter(imageList, ViewPagerAdapter.OnClickListener{
+        val adapter = ViewPagerAdapter(targetScreenDataList, ViewPagerAdapter.OnClickListener{
             photo -> Log.d(TAG, photo.toString() )
             Toast.makeText(this@MainActivity, "Clicked>>>>>>", Toast.LENGTH_SHORT).show()
         })
@@ -60,9 +43,9 @@ class MainActivity : AppCompatActivity() {
         val pageTransformer = ViewPager2.PageTransformer { page: View, position: Float ->
             page.translationX = -pageTranslationX * position
             // Next line scales the item's height. You can remove it if you don't want this effect
-            page.scaleY = 1 - (0.25f * abs(position))
+            page.scaleY = 1 - (0.20f * abs(position))
             // If you want a fading effect uncomment the next line:
-           //  page.alpha = 0.25f + (1 - abs(position))
+            // page.alpha = 0.25f + (1 - abs(position))
         }
         viewPager2.setPageTransformer(pageTransformer)
             // The ItemDecoration gives the current (centered) item horizontal margin so that

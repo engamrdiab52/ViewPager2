@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">ViewPager2</string>
+    <string name="todo">TODO</string>
+    <string name="how_much_do_you_intend_to_spend_within_a_month_from_now">How much money do you intend to spend within a month from now?</string>
+    <string name="money_description">"How much money do you intend to spend within a month from now?"</string>
+    <string name="help_description">"How much help do you intend to give for charity at home, work, friends, relatives, neighbours, or someone you don\'t know?"</string>
+    <string name="kind_description">"How many kind words do you intend to offer as a charity, whether in your real life or social networking sites?"</string>
+    <string name="pray_description">"How often do you intend to pray for the good of others?"</string>
+    <string name="smile_description">"How often do you intend to smile with the intention of charity?"</string>
+    <string name="share_description">"How often do you intend to talk about this app, whether in your real life or social networking sites, in the belief that The one who directs to goodness is like the one who does it?"</string>
+    <string name="status_bar">status bar</string>
+
+    <string name="you_are_3_days_late">You are 3 days late</string>
+    <string name="you_are_3_days_ahead">You are 3 days ahead</string>
 </resources>
